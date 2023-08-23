@@ -21,13 +21,13 @@ baseRouter.post('/add', (req, res) => {
 
 
 baseRouter.post('/subtract', (req, res) => {
-    var ans=req.body.first+req.body.second;
+    var ans=req.body.first-req.body.second;
     res.status(200).json({ "result": ans });
     
 });
 
 app.use(baseUrl, baseRouter);
 app.listen(PORT, () => {
-    
+
     console.log("Server running at PORT", PORT);
 });
